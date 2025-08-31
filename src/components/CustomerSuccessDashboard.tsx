@@ -44,20 +44,16 @@ export const CustomerSuccessDashboard: React.FC = () => {
           isLoading={isLoading}
         />
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-          <div className="order-1">
-            <StackedBarChart 
-              data={mockDashboardData.weeklyHealth}
-              className="animate-fade-in"
-            />
-          </div>
+        <div className="space-y-6">
+          <StackedBarChart 
+            data={mockDashboardData.weeklyHealth}
+            className="animate-fade-in"
+          />
           
-          <div className="order-2">
-            <ClientHeatMap 
-              data={mockDashboardData.clientTrajectories}
-              className="animate-fade-in"
-            />
-          </div>
+          <ClientHeatMap 
+            data={mockDashboardData.clientTrajectories}
+            className="animate-fade-in"
+          />
         </div>
 
         {/* Cards de métricas resumidas */}
